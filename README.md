@@ -26,11 +26,15 @@ MS Excel (CSV File)
 
 TMC Images: High-resolution Terrain Mapping Camera (TMC) lunar images from ISRO.
 
-Validation Dataset: Crater datasets from the Lunar and Planetary Institute (LPI) repository, ensuring accurate validation and comparison of detected craters.
+Validation Dataset: Crater datasets from the Lunar and Planetary Institute (LPI) repository, ensuring accurate validation and comparison of detected craters. 
+
 
 🚀 Key Features
 
 🌌 Accurate Detection: Combines Template Matching, Hough Circle Transform, and Isomorphic approaches to boost detection precision.
 
+------------
+
+You can see the outputs of the projects in the "OUTPUT FOLDER". The folder contains the implementation flowchart, the Accuracy table, preprocessing steps that moon crater image under goes to extract from it and then the CSV FIle as well. Out of 53 craters, 47 moon crater images have been sucessfully located on the Global Mosaic and also their coordinates have been validated via a LPO NASA Database. 
 
 
