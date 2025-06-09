@@ -1,0 +1,53 @@
+✅ Template Matching
+Pros:
+ - Simple and Easy to Implement
+ - Just requires a reference crater image (template) and applies cv2.matchTemplate().
+ - Works Well with Known Shapes
+ - Detects craters that resemble the template accurately, making it ideal for repeated patterns.
+ - Fast for Small Image Sets
+ - Efficient on moderate-size images without needing heavy preprocessing.
+
+Cons:
+ - Not Rotation or Scale Invariant
+ - Cannot detect craters if they appear rotated or of different size than the template.
+ - Sensitive to Lighting and Noise
+ - Minor changes in lighting or contrast affect the accuracy of detection.
+
+✅ Isomorphic Approach
+Pros:
+ - Handles Geometric Variations
+ - Can detect craters with slight shape deformities or transformations.
+ - Robust to Rotation and Perspective
+ - Identifies structurally similar patterns regardless of orientation.
+ - Ideal for Complex Patterns
+ - Works well with craters having irregular edges or overlapping regions.
+
+Cons:
+ - Complex and Computationally Intensive
+ - Requires more resources and advanced geometric matching algorithms.
+ - Difficult to Tune Parameters
+ - Needs careful adjustment of thresholds and descriptors for optimal results.
+
+✅ Hough Circle Transform
+Pros:
+ - Detects Perfect Circles Accurately
+ - Works well when craters appear as clean circular shapes.
+ - Scale and Rotation Invariant
+ - Can identify circles of varying radii and orientations.
+ - Good for Preprocessing
+ - Can be used to suggest potential crater regions for further analysis.
+
+Cons:
+ - Fails with Irregular Shapes or Noise
+ - Misses deformed or partially visible craters.
+ - Needs Edge Detection Preprocessing
+ - Performance heavily depends on the quality of edge detection (like Canny).
+
+🏆 Why Template Matching is Best for This Project
+ - Targeted Accuracy: Since craters often follow a consistent shape, template matching gives high precision when using a properly chosen reference.
+
+ - Low Complexity: Ideal for deployment in a lightweight application where resources are limited.
+
+ - Quick Implementation: Allowed rapid prototyping and testing of the detection pipeline in the project timeline.
+
+👉 Despite its limitations, template matching delivers the best trade-off between accuracy, speed, and simplicity for your current use case — especially where the goal is to identify known crater shapes from TMC images and match coordinates accordingly.
